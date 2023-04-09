@@ -1,105 +1,124 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+body{overflow: hidden;width:100%;}
+.top {
+  width: 100%;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 0, 0, 0.089), rgba(0, 0, 255, 0), rgba(58, 49, 31, 0.055))
+}
+.top nav{ display:flex;
+   justify-content: center;
+   flex-direction: row;
+  justify-content: space-evenly;}
 
-#top {
-  margin: auto; }
-  #top header #headads {
-    color: grey;
-    width: 60%;
-    height: 20px; }
-    #top header #headads img {
-      width: 1058px;
-      height: 165.298px;
-      margin-top: 10px;
-      margin-left: 40px; }
-  #top header #logo img {
-    width: 184px;
-    height: 100.656px; }
-  #top nav {
-    background: black;
-    border-top: 1px solid gold;
-    .
-		z-index: 200;
-    margin-left: auto;
-    width: 100%; }
-    #top nav span a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 50px;
-      margin-left: 20%; }
-      #top nav span a .dropimage {
-        width: 30px; }
-    #top nav #hiddengem {
-      display: none; }
-  #top .home a {
-    margin-left: 5%; }
+.top nav a {color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration:none;font-size:x-large;}
+/**hover part**/
+.top nav a:hover {text-decoration:overline;background:rgb(126, 253, 8);transition:1s;color:white;}
+/**hovertop end**/
 
+  /*? end of top section**********?*/
 #body a {
-  text-decoration: none; }
-  #body a #topnews {
-    font-size: 90px;
-    color: brown; }
-    #body a #topnews img {
-      width: 90%;
-      margin: auto;
-      padding-left: 10%;
-      padding-top: 6%; }
+  text-decoration: none;
+}
+
+#body a .topnews {
+  font-size: 90px;
+  color: brown;
+}
+
+#body a .topnews img {
+  width: 90%;
+  margin: auto;
+  padding-left: 10%;
+  padding-top: 6%;
+}
+
 #body #newsgrid {
   margin-top: 30px;
   width: 2400px;
   height: 1500px;
   display: grid;
   grid-template-columns: 20% 20% 20%;
-  grid-gap: 10%; }
-  #body #newsgrid div {
-    background: grey;
-    overflow: hidden; }
-    #body #newsgrid div a {
-      font-size: 35px;
-      text-decoration: none;
-      color: brown; }
-  #body #newsgrid .newsportion a img {
-    width: 100%;
-    height: 80%; }
-  #body #newsgrid .newsportion a h2 {
-    background: #fff;
-    border-bottom: 1px solid gold; }
+  grid-gap: 10%;
+}
+
+#body #newsgrid div {
+  background: grey;
+  overflow: hidden;
+}
+
+#body #newsgrid div a {
+  font-size: 35px;
+  text-decoration: none;
+  color: brown;
+}
+
+#body #newsgrid .newsportion a img {
+  width: 100%;
+  height: 80%;
+}
+
+#body #newsgrid .newsportion a h2 {
+  background: #fff;
+  border-bottom: 1px solid gold;
+}
 
 #newsgrid div:hover a {
   background: rgba(20, 30, 30, 0.2);
-  transition: 0.5s; }
+  transition: 0.5s;
+}
 
 .newsportion:hover {
   transform: rotate(2deg);
-  transition: 0.5s; }
+  transition: 0.5s;
+}
 
 .newsportion a img:hover {
   opacity: 0.5;
   transition: 0.2s;
-  transform: scale(1.2); }
+  transform: scale(1.2);
+}
 
 nav span :hover {
   background: rgba(600, 30, 20, 0.8);
   z-index: 1000;
   transition: 0.3s;
-  transition-timing-function: 2s; }
+  transition-timing-function: 2s;
+}
 
 
-#topnews  {
-      margin:20px 20%;
+.topnews {
+  margin: 20px 20%;
 
-   }
-   #topnews img 
-   {
-    width:900px;
-   }
+}
+
+.topnews img {
+  width: 900px;
+}
 
 /*# sourceMappingURL=style.css.map */
-#toplorem{font-size:35px;color:black;}/*top paragraph*/
-#lorem{font-size: 30px;color:brown;}/*bottom paragraph*/
-#topnews span {padding-top:400px;padding-left:30%;}
+.toplorem {
+  font-size: 35px;
+  color: black;
+}
+
+/*top paragraph*/
+#lorem {
+  font-size: 30px;
+  color: brown;
+}
+
+/*bottom paragraph*/
+.topnews span {
+  padding-top: 400px;
+  padding-left: 30%;
+}
+
 /*hovering home national international*/
 
 /* nothing    
