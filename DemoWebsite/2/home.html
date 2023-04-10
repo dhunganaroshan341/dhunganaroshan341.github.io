@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random YouTube Video Example</title>
+  </head>
+  <body>
+    <h1>Random YouTube Video</h1>
+    <div id="player"></div>
+
+    <script>
+      // Create an array of YouTube video IDs
+      const videoIds = [
+        "dQw4w9WgXcQ",
+        "kXYiU_JCYtU",
+        "X9vK6j8UcXE",
+        "2Vv-BfVoq4g",
+        "6Dh-RL__uN4"
+      ];
+
+      // Select a random video ID from the array
+      const randomIndex = Math.floor(Math.random() * videoIds.length);
+      const randomVideoId = videoIds[randomIndex];
+
+      // Create the YouTube player
+      const playerElement = document.getElementById("player");
+      playerElement.innerHTML = `
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/${randomVideoId}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      `;
+    </script>
+  </body>
+</html>
