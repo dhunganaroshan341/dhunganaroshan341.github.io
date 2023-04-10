@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About Me</h1>
+    <div>
+      <p id="typed-text"></p>
+    </div>
+
+    <script>
+      // Define the text to be typed
+      const textArray = ["My name is Roshan Dhungana", "I do this"];
+
+      // Define the time between each character being typed (in milliseconds)
+      const typingDelay = 100;
+
+      // Define the pause between each line of text being typed (in milliseconds)
+      const linePause = 1000;
+
+      // Get the element where the text will be typed
+      const typedTextElement = document.getElementById("typed-text");
+
+      // Define the function to type the text
+      function typeText(textArrayIndex, characterIndex) {
+        // If we've typed all the characters in the current line of text, move to the next line
+        if (characterIndex === textArray[textArrayIndex].length) {
+          // If we've typed all the lines of text, stop typing
+          if (textArrayIndex === textArray.length - 1) {
+            return;
+          }
+
+          // Otherwise, pause before typing the next line
+          setTimeout(() => {
+            typedTextElement.innerHTML += "<br>";
+            typeText(textArrayIndex + 1, 0);
+          }, linePause);
+
+          return;
+        }
+
+        // Otherwise, type the next character
+        setTimeout(() => {
+          typedTextElement.innerHTML += textArray[textArrayIndex].charAt(characterIndex);
+          typeText(textArrayIndex, characterIndex + 1);
+        }, typingDelay);
+      }
+
+      // Start typing the text
+      typeText(0, 0);
+    </script>
+  </body>
+</html>
